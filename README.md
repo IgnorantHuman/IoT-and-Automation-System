@@ -58,7 +58,7 @@ smart-building-circuit.png   Circuit diagram
 6. If using Tinkercad, start the bridge with your circuit URL:
 
    ```bash
-   node mqtt-bridge-v1.js "https://www.tinkercad.com/things/YOUR_CIRCUIT" localhost 1883
+   node mqtt-bridge-v1.js <ARDUINO_WEBSITE_LINK>
    ```
 
 7. Start the Tinkercad simulation and keep its Serial Monitor open.
