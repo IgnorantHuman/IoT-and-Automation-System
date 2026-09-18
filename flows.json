@@ -1,0 +1,1158 @@
+[
+    {
+        "id": "2d82a9501e17c8ac",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5acbfcc946f64fd4",
+        "type": "ui_gauge",
+        "z": "2d82a9501e17c8ac",
+        "name": "Temperature (Gauge)",
+        "group": "484e2989e4b2f922",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature (Gauge)",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "125",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "0",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "134dfb07a8cea63a",
+        "type": "ui_gauge",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light Level",
+        "group": "dbaec58ab707b786",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Light Level",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#04ff00"
+        ],
+        "seg1": "30",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2b06dbf0e704f56b",
+        "type": "ui_gauge",
+        "z": "2d82a9501e17c8ac",
+        "name": "Distance",
+        "group": "553f1bba854f8817",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distance",
+        "label": "cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 400,
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "200",
+        "diff": false,
+        "className": "",
+        "x": 460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "850efa97820c1402",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "553f1bba854f8817",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Motion",
+        "label": "Motion",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 450,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e7aadf6ac6ccc377",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "grp_light",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Light State",
+        "label": "Light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 910,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "025ec7018f55c138",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "grp_light",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Light Mode State",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 930,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a3cbc18f8f5d9432",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "grp_fan",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Fan State",
+        "label": "Fan",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f82d0819e2c69d51",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "grp_fan",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Fan Mode State",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "310d7bb5a4312c65",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "grp_door",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Door State",
+        "label": "Door",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 910,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cd5aee04591801c5",
+        "type": "ui_text",
+        "z": "2d82a9501e17c8ac",
+        "group": "grp_door",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Door Mode State",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "5f60155788fc51b3",
+        "type": "mqtt out",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "45b5769861d792e7",
+        "x": 730,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6a4255f9b8244321",
+        "type": "mqtt out",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "45b5769861d792e7",
+        "x": 730,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "add11f773b089a0c",
+        "type": "mqtt out",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "45b5769861d792e7",
+        "x": 730,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "7a3bb385ab0b0eca",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Temp Sensor",
+        "topic": "building/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 60,
+        "wires": [
+            [
+                "5acbfcc946f64fd4",
+                "6d597a09e14cbe9f"
+            ]
+        ]
+    },
+    {
+        "id": "6d597a09e14cbe9f",
+        "type": "ui_chart",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "group": "484e2989e4b2f922",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature(Line chart)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "125",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "687550e02d061938",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light Sensor",
+        "topic": "building/light_level",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "134dfb07a8cea63a",
+                "ad47f30e6f9d213e"
+            ]
+        ]
+    },
+    {
+        "id": "ad47f30e6f9d213e",
+        "type": "ui_chart",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light Level",
+        "group": "dbaec58ab707b786",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Light Level",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d436de8f138e2243",
+        "type": "ui_switch",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light Mode Switch",
+        "label": "Manual Mode (LIGHT)",
+        "tooltip": "",
+        "group": "grp_light",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "onvalue": "MANUAL",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "#0066cc",
+        "offvalue": "AUTO",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "36fe4a550ffbbef4"
+            ]
+        ]
+    },
+    {
+        "id": "36fe4a550ffbbef4",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/lightmode ' + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 520,
+        "wires": [
+            [
+                "5f60155788fc51b3"
+            ]
+        ]
+    },
+    {
+        "id": "9582abdd0e53d5cd",
+        "type": "ui_button",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light ON",
+        "group": "grp_light",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "ON",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#00b500",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "2bb19db48ba4a2d3"
+            ]
+        ]
+    },
+    {
+        "id": "2bb19db48ba4a2d3",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/light/control ON';\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "5f60155788fc51b3"
+            ]
+        ]
+    },
+    {
+        "id": "9d5ae4276987a6b4",
+        "type": "ui_button",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light OFF",
+        "group": "grp_light",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "OFF",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#ca3838",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 600,
+        "wires": [
+            [
+                "e2d43e66d17b9d54"
+            ]
+        ]
+    },
+    {
+        "id": "e2d43e66d17b9d54",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/light/control OFF';\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 600,
+        "wires": [
+            [
+                "5f60155788fc51b3"
+            ]
+        ]
+    },
+    {
+        "id": "5f49babca3ace6cc",
+        "type": "ui_switch",
+        "z": "2d82a9501e17c8ac",
+        "name": "Fan Mode Switch",
+        "label": "Manual Mode (FAN)",
+        "tooltip": "",
+        "group": "grp_fan",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "onvalue": "MANUAL",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "#0066cc",
+        "offvalue": "AUTO",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "1aa3b12bd7d3dadb"
+            ]
+        ]
+    },
+    {
+        "id": "1aa3b12bd7d3dadb",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/fanmode ' + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "x": 560,
+        "y": 660,
+        "wires": [
+            [
+                "6a4255f9b8244321"
+            ]
+        ]
+    },
+    {
+        "id": "3c571706ce50d434",
+        "type": "ui_button",
+        "z": "2d82a9501e17c8ac",
+        "name": "Fan ON",
+        "group": "grp_fan",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "ON",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#00b500",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "59c447069e1a875a"
+            ]
+        ]
+    },
+    {
+        "id": "59c447069e1a875a",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/fan/control ON';\nreturn msg;",
+        "outputs": 1,
+        "x": 560,
+        "y": 700,
+        "wires": [
+            [
+                "6a4255f9b8244321"
+            ]
+        ]
+    },
+    {
+        "id": "ee7fab7a4281ab2e",
+        "type": "ui_button",
+        "z": "2d82a9501e17c8ac",
+        "name": "Fan OFF",
+        "group": "grp_fan",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "OFF",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#ca3838",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 740,
+        "wires": [
+            [
+                "acec3d724c64c692"
+            ]
+        ]
+    },
+    {
+        "id": "acec3d724c64c692",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/fan/control OFF';\nreturn msg;",
+        "outputs": 1,
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "6a4255f9b8244321"
+            ]
+        ]
+    },
+    {
+        "id": "c048485a1c7459f9",
+        "type": "ui_switch",
+        "z": "2d82a9501e17c8ac",
+        "name": "Door Mode Switch",
+        "label": "Manual Mode (DOOR)",
+        "tooltip": "",
+        "group": "grp_door",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "onvalue": "MANUAL",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "#0066cc",
+        "offvalue": "AUTO",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 320,
+        "y": 800,
+        "wires": [
+            [
+                "92c2abcf08bc4e44"
+            ]
+        ]
+    },
+    {
+        "id": "92c2abcf08bc4e44",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/doormode ' + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "x": 560,
+        "y": 800,
+        "wires": [
+            [
+                "add11f773b089a0c"
+            ]
+        ]
+    },
+    {
+        "id": "bdb12652ebe0e7b6",
+        "type": "ui_button",
+        "z": "2d82a9501e17c8ac",
+        "name": "Door OPEN",
+        "group": "grp_door",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "OPEN",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#00b500",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 840,
+        "wires": [
+            [
+                "0e8d4339eedb9fb0"
+            ]
+        ]
+    },
+    {
+        "id": "0e8d4339eedb9fb0",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/door/control OPEN';\nreturn msg;",
+        "outputs": 1,
+        "x": 560,
+        "y": 840,
+        "wires": [
+            [
+                "add11f773b089a0c"
+            ]
+        ]
+    },
+    {
+        "id": "316aa1e23f32eaae",
+        "type": "ui_button",
+        "z": "2d82a9501e17c8ac",
+        "name": "Door CLOSE",
+        "group": "grp_door",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "CLOSE",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#ca3838",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 880,
+        "wires": [
+            [
+                "b1e6cca38176d6b2"
+            ]
+        ]
+    },
+    {
+        "id": "b1e6cca38176d6b2",
+        "type": "function",
+        "z": "2d82a9501e17c8ac",
+        "name": "",
+        "func": "msg.topic = 'sensor/command';\nmsg.payload = 'building/door/control CLOSE';\nreturn msg;",
+        "outputs": 1,
+        "x": 560,
+        "y": 880,
+        "wires": [
+            [
+                "add11f773b089a0c"
+            ]
+        ]
+    },
+    {
+        "id": "2fec038910d30686",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Distance",
+        "topic": "building/distance",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "2b06dbf0e704f56b"
+            ]
+        ]
+    },
+    {
+        "id": "fb256a1b3ba7f0b1",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Motion",
+        "topic": "building/motion",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "850efa97820c1402"
+            ]
+        ]
+    },
+    {
+        "id": "c56a5edd83f5675f",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light State",
+        "topic": "building/light/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 180,
+        "wires": [
+            [
+                "e7aadf6ac6ccc377"
+            ]
+        ]
+    },
+    {
+        "id": "023f2d99486ec044",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Light Mode",
+        "topic": "building/lightmode/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 240,
+        "wires": [
+            [
+                "025ec7018f55c138"
+            ]
+        ]
+    },
+    {
+        "id": "7913cf3743c86635",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Fan State",
+        "topic": "building/fan/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 40,
+        "wires": [
+            [
+                "a3cbc18f8f5d9432"
+            ]
+        ]
+    },
+    {
+        "id": "190f312ab841304d",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Fan Mode",
+        "topic": "building/fanmode/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 100,
+        "wires": [
+            [
+                "f82d0819e2c69d51"
+            ]
+        ]
+    },
+    {
+        "id": "068b727041a2faba",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Door State",
+        "topic": "building/door/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "310d7bb5a4312c65"
+            ]
+        ]
+    },
+    {
+        "id": "52c332d17c8e90d6",
+        "type": "mqtt in",
+        "z": "2d82a9501e17c8ac",
+        "name": "Door Mode",
+        "topic": "building/doormode/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "45b5769861d792e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 380,
+        "wires": [
+            [
+                "cd5aee04591801c5"
+            ]
+        ]
+    },
+    {
+        "id": "2bae19c188b25f32",
+        "type": "ui_template",
+        "z": "2d82a9501e17c8ac",
+        "group": "bb6f13b3a50630a2",
+        "name": "",
+        "order": 0,
+        "width": "9",
+        "height": "5",
+        "format": "<style>\n    .header-right {\n        text-align: right;\n        font-family: 'Orbitron', 'Courier New', monospace;\n    }\n\n    .time-wrapper {\n        background: rgba(0, 0, 0, 0.3);\n        border: 1px solid rgba(255, 255, 255, 0.1);\n        border-radius: 16px;\n        padding: 16px 24px;\n        backdrop-filter: blur(10px);\n        position: relative;\n        overflow: hidden;\n        width: 420px;\n        margin-left: auto;\n    }\n\n    .time-wrapper::before {\n        content: '';\n        position: absolute;\n        top: 0;\n        left: -100%;\n        width: 100%;\n        height: 1px;\n        background: linear-gradient(90deg, transparent, #00ffff, transparent);\n        animation: scan 3s infinite;\n    }\n\n    @keyframes scan {\n        0% {\n            left: -100%;\n        }\n\n        100% {\n            left: 100%;\n        }\n    }\n\n    .date-row {\n        display: flex;\n        align-items: center;\n        justify-content: flex-end;\n        gap: 10px;\n        margin-bottom: 8px;\n        height: 18px;\n    }\n\n    .date-text {\n        font-size: 12px;\n        color: #64ffda;\n        letter-spacing: 2px;\n        white-space: nowrap;\n        flex: 1;\n        text-align: right;\n    }\n\n    .date-glow {\n        width: 6px;\n        height: 6px;\n        background: #64ffda;\n        border-radius: 50%;\n        box-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda;\n        animation: pulse-glow 2s infinite;\n        flex-shrink: 0;\n    }\n\n    @keyframes pulse-glow {\n\n        0%,\n        100% {\n            box-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda;\n        }\n\n        50% {\n            box-shadow: 0 0 15px #64ffda, 0 0 30px #64ffda;\n        }\n    }\n\n    .time-row {\n        display: flex;\n        align-items: center;\n        justify-content: flex-end;\n        gap: 2px;\n    }\n\n    .time-block {\n        background: rgba(0, 255, 255, 0.05);\n        border: 1px solid rgba(0, 255, 255, 0.2);\n        border-radius: 8px;\n        padding: 8px 12px;\n        font-size: 42px;\n        font-weight: 900;\n        color: #00ffff;\n        text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);\n        letter-spacing: 4px;\n        position: relative;\n        width: 70px;\n        text-align: center;\n        flex-shrink: 0;\n        font-family: 'Orbitron', 'Courier New', monospace;\n    }\n\n    .time-block::after {\n        content: '';\n        position: absolute;\n        bottom: -2px;\n        left: 10%;\n        width: 80%;\n        height: 2px;\n        background: #00ffff;\n        box-shadow: 0 0 10px #00ffff;\n    }\n\n    .time-separator {\n        font-size: 36px;\n        color: #ff00ff;\n        text-shadow: 0 0 15px #ff00ff;\n        animation: flicker 1.5s infinite;\n        margin: 0 4px;\n        width: 20px;\n        text-align: center;\n        flex-shrink: 0;\n        display: inline-block;\n    }\n\n    @keyframes flicker {\n\n        0%,\n        100% {\n            opacity: 1;\n        }\n\n        50% {\n            opacity: 0.3;\n        }\n    }\n\n    .seconds-colon {\n        font-size: 18px;\n        color: #ff00ff;\n        text-shadow: 0 0 10px #ff00ff;\n        width: 10px;\n        text-align: center;\n        flex-shrink: 0;\n        display: inline-block;\n    }\n\n    .seconds-block {\n        font-size: 22px;\n        font-weight: 700;\n        color: #ff00ff;\n        text-shadow: 0 0 15px #ff00ff;\n        letter-spacing: 2px;\n        width: 32px;\n        text-align: center;\n        flex-shrink: 0;\n        display: inline-block;\n        font-family: 'Orbitron', 'Courier New', monospace;\n    }\n\n    .ampm-badge {\n        background: rgba(255, 0, 255, 0.1);\n        border: 1px solid rgba(255, 0, 255, 0.3);\n        border-radius: 20px;\n        padding: 4px 10px;\n        font-size: 12px;\n        color: #ff00ff;\n        letter-spacing: 2px;\n        margin-left: 12px;\n        text-shadow: 0 0 10px #ff00ff;\n        width: 36px;\n        text-align: center;\n        flex-shrink: 0;\n        display: inline-block;\n    }\n\n    .subtitle-neon {\n        font-size: 10px;\n        letter-spacing: 6px;\n        color: rgba(255, 255, 255, 0.4);\n        margin-top: 8px;\n        text-transform: uppercase;\n        white-space: nowrap;\n        text-align: right;\n    }\n\n    .corner-decor {\n        position: absolute;\n        width: 10px;\n        height: 10px;\n        border-color: #00ffff;\n        border-style: solid;\n    }\n\n    .corner-tl {\n        top: 4px;\n        left: 4px;\n        border-width: 2px 0 0 2px;\n    }\n\n    .corner-tr {\n        top: 4px;\n        right: 4px;\n        border-width: 2px 2px 0 0;\n    }\n\n    .corner-bl {\n        bottom: 4px;\n        left: 4px;\n        border-width: 0 0 2px 2px;\n    }\n\n    .corner-br {\n        bottom: 4px;\n        right: 4px;\n        border-width: 0 2px 2px 0;\n    }\n</style>\n\n<div class=\"header-right\">\n    <div class=\"time-wrapper\" id=\"timeWrapper\">\n        <div class=\"corner-decor corner-tl\"></div>\n        <div class=\"corner-decor corner-tr\"></div>\n        <div class=\"corner-decor corner-bl\"></div>\n        <div class=\"corner-decor corner-br\"></div>\n\n        <div class=\"date-row\">\n            <span class=\"date-text\" id=\"dateDisplay\">TUESDAY, APRIL 28, 2026</span>\n            <div class=\"date-glow\"></div>\n        </div>\n\n        <div class=\"time-row\">\n            <div class=\"time-block\" id=\"hourDisplay\">03</div>\n            <span class=\"time-separator\">:</span>\n            <div class=\"time-block\" id=\"minuteDisplay\">40</div>\n            <span class=\"seconds-colon\">:</span>\n            <span class=\"seconds-block\" id=\"secondDisplay\">11</span>\n            <span class=\"ampm-badge\" id=\"ampmDisplay\">PM</span>\n        </div>\n\n        <div class=\"subtitle-neon\">◆ SmartBuilding ◆</div>\n    </div>\n</div>\n\n<script>\n    (function() {\n    const months = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];\n    const days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];\n    \n    // Get elements once\n    const dateEl = document.getElementById('dateDisplay');\n    const hourEl = document.getElementById('hourDisplay');\n    const minEl = document.getElementById('minuteDisplay');\n    const secEl = document.getElementById('secondDisplay');\n    const ampmEl = document.getElementById('ampmDisplay');\n    \n    // Store previous values to only update when changed\n    let prevDate = '';\n    let prevHour = '';\n    let prevMin = '';\n    let prevSec = '';\n    let prevAmpm = '';\n    \n    function updateDateTime() {\n        const now = new Date();\n        \n        // Date - only changes at midnight\n        const dateStr = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();\n        if (dateStr !== prevDate) {\n            dateEl.textContent = dateStr;\n            prevDate = dateStr;\n        }\n        \n        // Time\n        let hours = now.getHours();\n        const ampm = hours >= 12 ? 'PM' : 'AM';\n        hours = hours % 12 || 12;\n        const hourStr = String(hours).padStart(2, '0');\n        const minStr = String(now.getMinutes()).padStart(2, '0');\n        const secStr = String(now.getSeconds()).padStart(2, '0');\n        \n        // Only update if value changed\n        if (hourStr !== prevHour) { hourEl.textContent = hourStr; prevHour = hourStr; }\n        if (minStr !== prevMin) { minEl.textContent = minStr; prevMin = minStr; }\n        if (secStr !== prevSec) { secEl.textContent = secStr; prevSec = secStr; }\n        if (ampm !== prevAmpm) { ampmEl.textContent = ampm; prevAmpm = ampm; }\n    }\n    \n    updateDateTime();\n    setInterval(updateDateTime, 1000);\n})();\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "484e2989e4b2f922",
+        "type": "ui_group",
+        "name": "Temperature Sensor",
+        "tab": "ui_tab_1",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dbaec58ab707b786",
+        "type": "ui_group",
+        "name": "Light Sensor",
+        "tab": "ui_tab_1",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "553f1bba854f8817",
+        "type": "ui_group",
+        "name": "Ultrasonic Sensor",
+        "tab": "ui_tab_1",
+        "order": 7,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "grp_light",
+        "type": "ui_group",
+        "name": "Light Control",
+        "tab": "ui_tab_1",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "grp_fan",
+        "type": "ui_group",
+        "name": "Fan Control",
+        "tab": "ui_tab_1",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "grp_door",
+        "type": "ui_group",
+        "name": "Door Control",
+        "tab": "ui_tab_1",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "45b5769861d792e7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bb6f13b3a50630a2",
+        "type": "ui_group",
+        "name": "Time",
+        "tab": "ui_tab_1",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ui_tab_1",
+        "type": "ui_tab",
+        "name": "Smart Building",
+        "icon": "home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "55c7aef2c80b2ba6",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
